@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { isBrowser } from '../utils/is-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -9,14 +10,14 @@ export class LocalStorageService {
 
   // Set item
   setItem(key: string, value: string): void {
-    if (this.isBrowser()) {
+    if (isBrowser()) {
       window.localStorage.setItem(key, value);
     }
   }
 
   // Get item
   getItem(key: string): string | null {
-    if (this.isBrowser()) {
+    if (isBrowser()) {
       const value = window.localStorage.getItem(key);
       return value !== null ? value : null;
     }
@@ -25,14 +26,14 @@ export class LocalStorageService {
 
   // Remove item
   removeItem(key: string): void {
-    if (this.isBrowser()) {
+    if (isBrowser()) {
       window.localStorage.removeItem(key);
     }
   }
 
   // Clear all items
   clear(): void {
-    if (this.isBrowser()) {
+    if (isBrowser()) {
       window.localStorage.clear();
     }
   }
