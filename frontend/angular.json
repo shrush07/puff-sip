@@ -51,7 +51,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "/assets"
               }
             ],
             "styles": [
@@ -90,6 +91,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "src/proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "buildTarget": "frontend:build:production"
@@ -125,5 +129,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "26375235-2502-414d-8062-3380c3c2f22f"
   }
 }

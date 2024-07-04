@@ -1,0 +1,22 @@
+<div class="container">
+    <img [src]="food.imageUrl" [alt]="food.name" />
+    <div class="food-details">
+        <div class="header">
+            <span class="name">
+                {{food.name}}
+            </span>
+            <span class="favorite {{food.favorite? '' : 'not'}}">❤</span>
+        </div>
+        <div class="tags">
+            <a *ngFor="let tags of food.tags" routerLink="/tag/{{tags}}">
+                {{tags}}
+            </a>
+        </div>
+        <div class="price">
+            <span>
+                {{food.price | currency:'INR'}}
+            </span>
+        </div>
+        <button (click)="addToCart" class="cart-btn">Add to Cart</button>
+    </div>
+</div>

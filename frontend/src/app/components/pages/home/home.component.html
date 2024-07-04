@@ -1,0 +1,183 @@
+<div class="home">
+  <div id="banner" class="banner">
+    <h6 class="banner-sm-title">The One Stop Shop</h6>
+    <h1 class="banner-title">Discover the taste of real flavors</h1>
+    <button class="button">Explore More</button>
+  </div>
+  <div id="pop-items" class="pop-items">
+    <h3 class="pop-title">Popular Items</h3>
+  <app-tags></app-tags>
+    <div class="items">
+      <!-- <div class="item">
+                <img src="assets/images/coffee1.png" />
+                <h6 class="pop-sm-title">Coffee</h6>
+                <p class="info">₹120.00</p>
+                <button class="button">Buy Now</button>
+            </div>
+            <div class="item">
+                <img src="assets/images/juice1.png" />
+                <h6 class="pop-sm-title">Mocktail</h6>
+                <p class="info">₹120.00</p>
+                <button class="button">Buy Now</button>
+            </div>
+            <div class="item">
+                <img src="assets/images/puff1.png" />
+                <h6 class="pop-sm-title">Puff</h6>
+                <p class="info">₹120.00</p>
+                <button class="button">Buy Now</button>
+            </div>
+            <div class="item">
+                <img src="assets/images/coffee2.png" />
+                <h6 class="pop-sm-title">Coffee</h6>
+                <p class="info">₹120.00</p>
+                <button class="button">Buy Now</button>
+            </div> -->
+            
+      <ul class="items">
+        <li *ngFor="let food of foods" class="item">
+          <a routerLink="/food/{{ food.id }}" class="link">
+            <img [src]="food.imageUrl" [alt]="" food.name class="item-img"/>
+            <div class="content">
+                <div class="name">
+                    {{ food.name }}
+                </div>
+                <span class="favorite {{food.favorite?'':'not'}}">
+                    ❤
+                </span>
+                <div class="price">
+                    <span class="price">
+                        {{food.price | currency:'INR'}}
+                    </span>
+                </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="pop-btn">
+      <button class="button">Explore More</button>
+    </div>
+  </div>
+
+  <div id="about" class="about">
+    <div class="ab-info">
+      <div class="info-card">
+        <h4 class="info-no">01</h4>
+        <h5 class="info-title">About Us</h5>
+        <p class="info">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard.
+        </p>
+      </div>
+      <div class="info-card">
+        <h4 class="info-no">02</h4>
+        <h5 class="info-title">Our Coffee</h5>
+        <p class="info">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard.
+        </p>
+      </div>
+      <div class="info-card">
+        <h4 class="info-no">03</h4>
+        <h5 class="info-title">Our Mocktails</h5>
+        <p class="info">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard.
+        </p>
+      </div>
+      <div class="info-card">
+        <h4 class="info-no">04</h4>
+        <h5 class="info-title">Our Puffs</h5>
+        <p class="info">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="tag">
+    <img src="assets/images/tag.png" />
+  </div>
+  <div class="contact">
+    <div class="address">
+      <h3 class="con-head">Vadodara</h3>
+      <p class="contact-p">
+        GF-36, Florence Excellence, Vasna - Bhayli Main Rd, Bhayli, Vadodara,
+        Gujarat 390015, India
+      </p>
+      <a href="tel:8980492630" class="call">+91 89804 92630</a>
+    </div>
+    <div class="form">
+      <form id="contact-form">
+        <!-- <Form id="contact-form" (submit)="register()" (ngSubmit)="onSubmit()" #contactForm="ngForm"> -->
+        <div class="con-row">
+          <div class="cn-col">
+            <input
+              for="name"
+              id="name"
+              name="name"
+              type="text"
+              class="form-control"
+              placeholder="Name"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="cn-col">
+            <input
+              name="email"
+              id="email"
+              name="email"
+              type="text"
+              class="form-control"
+              placeholder="Email"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="cn-col">
+            <input
+              name="ratings"
+              id="ratings"
+              name="ratings"
+              type="text"
+              class="form-control"
+              placeholder="Ratings out of 10"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="cn-col">
+            <input
+              name="phone"
+              id="tel"
+              name="tel"
+              type="tel"
+              maxLength="10"
+              class="form-control"
+              placeholder="Contact Number"
+              autocomplete="tel"
+              required
+            />
+          </div>
+          <div class="cn-row">
+            <textarea
+              name="message"
+              id="message"
+              name="message"
+              class="form-control"
+              rows="5"
+              placeholder="Write a Review..."
+              spellCheck="false"
+              autocomplete="off"
+              required
+            ></textarea>
+          </div>
+        </div>
+        <p class="co-p">
+          <Button id="submit-btn" class="button" type="submit">SUBMIT</Button>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
