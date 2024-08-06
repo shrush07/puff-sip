@@ -1,15 +1,15 @@
-<div class="container">
+<div *ngIf="food" class="container">
     <img [src]="food.imageUrl" [alt]="food.name" />
     <div class="food-details">
         <div class="header">
-            <span class="name">
+            <span class="name">                    
                 {{food.name}}
             </span>
             <span class="favorite {{food.favorite? '' : 'not'}}">❤</span>
         </div>
         <div class="tags">
-            <a *ngFor="let tags of food.tags" routerLink="/tag/{{tags}}">
-                {{tags}}
+            <a *ngFor="let tag of food.tags" routerLink="/tag/{{tag}}">
+                {{tag}}
             </a>
         </div>
         <div class="price">
@@ -17,6 +17,6 @@
                 {{food.price | currency:'INR'}}
             </span>
         </div>
-        <button (click)="addToCart" class="cart-btn">Add to Cart</button>
+        <button (click)="addToCart()" class="cart-btn">Add to Cart</button>
     </div>
 </div>

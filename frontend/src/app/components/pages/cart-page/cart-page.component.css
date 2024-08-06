@@ -4,6 +4,7 @@
  align-items: flex-start;
  margin: 1.5rem;
  margin-top: 0.5rem;   
+ margin-left: 260px;
 }
 
 ul{
@@ -35,8 +36,16 @@ li img{
     object-fit: cover;
 }
 
-li div{
+li div  {
     padding: 1rem;
+}
+
+li div a{
+    font-family: 'Archivo';
+    font-size: 16px;
+    text-decoration: none;
+    color: #49340d;
+    font-weight: 600;
 }
 
 li div:not(:first-child){
@@ -58,6 +67,7 @@ li .remove-btn{
     color: #b08f5c;
     opacity: 0.7;
     outline: none;
+    cursor: pointer;
 }
 
 li .remove-btn:hover{
@@ -103,9 +113,8 @@ li .remove-btn:hover{
 
 .checkout a{
     display: block;
-    width: 90%;
+    width: 100%;
     text-align: center;
-    opacity: 0.7;
     justify-self: center;
     text-decoration: none;
     font-family: 'Archivo';
@@ -119,4 +128,19 @@ li .remove-btn:hover{
 .checkout a:hover{
     opacity: 1;
     cursor: pointer;
+    color: #49340d;
+}
+
+.button{
+    font-family: 'Archivo';
+    background-color: #b08f5c;
+    height: 50px;
+    width: 170px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+a.btn-link{
+    width: 100%;
+    opacity: 1;
 }

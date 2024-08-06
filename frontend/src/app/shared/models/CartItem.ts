@@ -1,9 +1,12 @@
 import { Food } from "./Food";
 
-export class CartItem{
-    static food: any;
-    constructor(public food:Food){
+export class CartItem {
+    constructor(food: Food) {
+      this.food = JSON.parse(JSON.stringify(food)); // Deep copy
+      this.price = this.food.price;
+      this.quantity = 1;
     }
-    quantity: number = 1;
-    price: number = this.food.price;
-}
+    food: Food;
+    price: number;
+    quantity: number;
+  }

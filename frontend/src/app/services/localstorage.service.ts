@@ -39,7 +39,7 @@ export class LocalStorageService {
   }
 
   // Check if running in the browser
-  private isBrowser(): boolean {
-    return typeof window !== 'undefined' && typeof window.document !== 'undefined';
-  }
+//   private isBrowser(): boolean {
+//     return typeof window !== 'undefined' && typeof window.document !== 'undefined';
+//   }
 }

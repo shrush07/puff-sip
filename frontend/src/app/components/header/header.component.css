@@ -37,7 +37,7 @@
     text-align: center;
     display: flex;
     padding: 0;
-    line-height: 2em;
+    line-height: 1em;
 }
 .header ul.navbar-nav li{
     display: block;
@@ -78,9 +78,10 @@ li a:hover{
     align-content: center;
     justify-content: center;
     align-items: center;
+    padding-left: 0;
 }
 .s-sites{
-    margin: 2px 4px;
+    margin: 2px 2px;
     list-style: none;
 }
 .s-links{
@@ -98,3 +99,66 @@ li a:hover{
     border: 1px solid #49340d;
     border-radius: 50%;
 }
+
+.s-as{
+    text-decoration: none;
+    color: #49340d;
+}
+
+.menu-container{
+    position: relative;
+  }
+  
+  .menu{
+    position:absolute;
+    z-index:1;
+    background:whitesmoke;
+    display: none;
+  }
+  
+  .menu-container:hover .menu{
+    display: block;
+  }
+  
+  .menu a{
+    width: auto;
+    text-decoration: none;
+    color: #b08f5c;
+    font-family: 'Archivo';
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  .menu a:hover{
+    color: #49340d;
+    font-weight: 700;
+    border-bottom: 3px solid #49340d ;
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+  .menu-link{
+    text-decoration: none;
+    color: #b08f5c;
+    font-family: 'Archivo';
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+  }
+  
+  ul a{
+    padding: 1rem;
+    display: inline-block;
+  }
+  
+  a span{
+    background: #49340d;
+    color: white;
+    padding: 0.1rem 0.25rem;
+    border-radius: 50%;
+    font-size:12px;
+  }

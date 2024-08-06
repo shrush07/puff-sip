@@ -8,34 +8,10 @@
     <h3 class="pop-title">Popular Items</h3>
   <app-tags></app-tags>
     <div class="items">
-      <!-- <div class="item">
-                <img src="assets/images/coffee1.png" />
-                <h6 class="pop-sm-title">Coffee</h6>
-                <p class="info">₹120.00</p>
-                <button class="button">Buy Now</button>
-            </div>
-            <div class="item">
-                <img src="assets/images/juice1.png" />
-                <h6 class="pop-sm-title">Mocktail</h6>
-                <p class="info">₹120.00</p>
-                <button class="button">Buy Now</button>
-            </div>
-            <div class="item">
-                <img src="assets/images/puff1.png" />
-                <h6 class="pop-sm-title">Puff</h6>
-                <p class="info">₹120.00</p>
-                <button class="button">Buy Now</button>
-            </div>
-            <div class="item">
-                <img src="assets/images/coffee2.png" />
-                <h6 class="pop-sm-title">Coffee</h6>
-                <p class="info">₹120.00</p>
-                <button class="button">Buy Now</button>
-            </div> -->
-            
       <ul class="items">
         <li *ngFor="let food of foods" class="item">
-          <a routerLink="/food/{{ food.id }}" class="link">
+          <!-- <a routerLink="/food/{{ food.id }}" class="link"> -->
+            <a [routerLink]="['/food', food?._id]" (click)="logFood(food)" class="link">
             <img [src]="food.imageUrl" [alt]="" food.name class="item-img"/>
             <div class="content">
                 <div class="name">

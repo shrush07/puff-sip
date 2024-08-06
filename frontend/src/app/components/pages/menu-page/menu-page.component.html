@@ -1,0 +1,27 @@
+<div id="pop-items" class="pop-items">
+    <h3 class="pop-title">Items</h3>
+  <app-tags></app-tags>
+    <div class="items">
+      <ul class="items">
+        <li *ngFor="let food of foods" class="item">
+          <a routerLink="/food/{{ food._id }}" class="link">
+            <img [src]="food.imageUrl" [alt]="" food.name class="item-img"/>
+            <div class="content">
+                <div class="name">
+                    {{ food.name }}
+                </div>
+                <span class="favorite {{food.favorite?'':'not'}}">
+                    ❤
+                </span>
+                <div class="price">
+                    <span class="price">
+                        {{food.price | currency:'INR'}}
+                    </span>
+                </div>
+            </div>
+        <button (click)="addToCart()" class="cart-btn">Add to Cart</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
