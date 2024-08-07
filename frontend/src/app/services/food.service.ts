@@ -43,4 +43,7 @@ export class FoodService {
   }
 
 
+  toggleFavorite(foodId: string, favorite: boolean): Observable<Food> {
+    return this.http.put<Food>(`${FOODS_URL}/foods/${foodId}/favorite`, { favorite });
+  }
 }

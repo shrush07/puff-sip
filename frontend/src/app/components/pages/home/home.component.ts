@@ -31,6 +31,18 @@ export class HomeComponent implements OnInit{
     console.log('Clicked food:', food);
   }
   
+
+  toggleFavorite(food: Food): void {
+    this.foodService.toggleFavorite(food.name, !food.favorite).subscribe(
+      (updatedFood) => {
+        food.favorite = updatedFood.favorite;
+      },
+      (error) => {
+        console.error('Error updating favorite status:', error);
+      }
+    );
+  }
+  
   ngOnInit(): void {
     
  

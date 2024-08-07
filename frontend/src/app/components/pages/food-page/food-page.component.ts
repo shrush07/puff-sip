@@ -11,7 +11,6 @@ import { Food } from '../../../shared/models/Food';
 })
 export class FoodPageComponent implements OnInit {
   food!: Food;
-  route: any;
   constructor(private activatedRoute:ActivatedRoute, private foodService:FoodService,
     private cartService:CartService, private router: Router) {
     // activatedRoute.params.subscribe((params) => {
@@ -21,41 +20,22 @@ export class FoodPageComponent implements OnInit {
     //   });
     // })
 
-    // this.activatedRoute.params.subscribe((params) => {
-    //   if (params['id']) {
-    //     this.foodService.getFoodById(params['id']).subscribe(
-    //       (serverFood) => {
-    //         this.food = serverFood;
-    //       },
-    //       (error) => {
-    //         console.error('Error fetching food:', error);
-    //       }
-    //     );
-    //   }
-    // });
-   }
-
-   ngOnInit() {
-    this.route.params.subscribe((params: { [x: string]: string; }) => {
+    this.activatedRoute.params.subscribe((params) => {
       if (params['id']) {
-        this.getFoodDetails(params['id']);
-      } else {
-        console.error('No ID parameter found in route');
-        // Handle the case when no ID is provided, e.g., redirect to a list page
+        this.foodService.getFoodById(params['id']).subscribe(
+          (serverFood) => {
+            this.food = serverFood;
+          },
+          (error) => {
+            console.error('Error fetching food:', error);
+          }
+        );
       }
     });
+   }
+
+  ngOnInit(): void {
   }
-  
-  getFoodDetails(id: string) {
-    this.foodService.getFoodById(id).subscribe(
-      food => {
-        console.log('Food details:', food);
-        // Handle the food data
-      },
-      error => console.error('Error fetching food:', error)
-    );
-  }
-  
 
   addToCart(){
     console.log("foodid",this.food);
