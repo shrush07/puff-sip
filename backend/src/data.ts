@@ -1,3 +1,4 @@
+import { count } from "console"
 
 export const sample_foods: any[] =[
     {
@@ -26,6 +27,14 @@ export const sample_foods: any[] =[
     },
     {
         id: '4',
+        name: 'Croisaant',
+        price: 120.00,
+        imageUrl: 'assets/images/croisaant1.png',
+        tags: ['Croisaant'],
+        favorite: true,
+    },
+    {
+        id: '5',
         name: 'Coffee',
         price: 120.00,
         imageUrl: 'assets/images/coffee2.png',
@@ -33,15 +42,23 @@ export const sample_foods: any[] =[
         favorite: true,
     },
     {
-        id: '5',
-        name: 'Mocktail',
+        id: '6',
+        name: 'Burger',
         price: 120.00,
-        imageUrl: 'assets/images/juice2.png',
-        tags: ['Coffee'],
+        imageUrl: 'assets/images/burger1png',
+        tags: ['Burger'],
         favorite: true,
     },
     {
-        _id: '6',
+        id: '7',
+        name: 'Mocktail',
+        price: 120.00,
+        imageUrl: 'assets/images/juice2.png',
+        tags: ['Mocktail'],
+        favorite: true,
+    },
+    {
+        _id: '8',
         name: 'Coffee',
         price: 120.00,
         imageUrl: 'assets/images/coffee3.png',
@@ -49,7 +66,23 @@ export const sample_foods: any[] =[
         favorite: true,
     },
     {
-        _id: '7',
+        _id: '9',
+        name: 'Croisaant',
+        price: 120.00,
+        imageUrl: 'assets/images/croisaant2.png',
+        tags: ['Croisaant'],
+        favorite: true,
+    },
+    {
+        _id: '10',
+        name: 'Puff',
+        price: 120.00,
+        imageUrl: 'assets/images/puff2.png',
+        tags: ['Puff'],
+        favorite: true,
+    },
+    {
+        _id: '11',
         name: 'Coffee',
         price: 120.00,
         imageUrl: 'assets/images/coffee4.png',
@@ -59,10 +92,13 @@ export const sample_foods: any[] =[
 ]
 
 export const sample_tags:any[] = [
-    { name: 'All', count: 7 },
+    { name: 'All', count: 11 },
     { name: 'Coffee', count: 4 },
     { name: 'Mocktail', count: 2 },
-    { name: 'Puff', count: 1 },
+    { name: 'Puff', count: 2 },
+    { name: 'Burger', count: 1 },
+    { name: 'Croisaant', count: 2}
+
 ]
 
 export const sample_users: any[] = [
