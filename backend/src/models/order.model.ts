@@ -17,21 +17,21 @@ import { Food, FoodSchema } from "./food.model";
 const mongoose = require('mongoose');
 
 export interface OrderItem {
-  id: number;
+  _id: number;
   food: Food;
   price: number;
   quantity: number;
 }
 
 export const OrderItemSchema = new Schema<OrderItem>({
-  id: {type: Number, required: true},
+  _id: {type: Number, required: true},
   food: { type: FoodSchema, required: true },
   price: { type: Number, required: true },
   quantity: { type: Number, required: true },
 });
 
 export interface Order {
-  id: string;
+  _id: string;
   items: OrderItem[];
   totalPrice: number;
   name: string;
@@ -46,14 +46,14 @@ export interface Order {
 
 const orderSchema = new Schema<Order>(
   {
-    id: { type: String, required: true },
+    user: { type: mongoose.Schema.Types.ObjectId, required: true, ref: 'User' },
+    _id: { type: String, required: true },
     name: { type: String, required: true },
     address: { type: String, required: true },
     paymentId: { type: String },
     totalPrice: { type: Number, required: true },
     items: { type: [OrderItemSchema], required: true },
     status: { type: String, default: OrderStatus.NEW },
-    user: { type: Schema.Types.ObjectId, required: true },
   },
   {
     timestamps: true,

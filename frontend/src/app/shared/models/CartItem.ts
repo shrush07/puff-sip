@@ -1,6 +1,7 @@
 import { Food } from "./Food";
 
 export class CartItem {
+    _id: any;
     constructor(food: Food) {
       this.food = JSON.parse(JSON.stringify(food)); // Deep copy
       this.price = this.food.price;

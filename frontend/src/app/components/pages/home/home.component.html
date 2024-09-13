@@ -17,12 +17,12 @@
                 <div class="name">
                     {{ food.name }}
                 </div>
-                <!-- <span class="favorite {{food.favorite?'':'not'}}">
+                <span class="favorite {{food.favorite?'':'not'}}">
                     ❤
+                </span>
+                <!-- <span (click)="toggleFavorite(food)" class="favorite {{food.favorite?'':'not'}}" >
+                  ❤
                 </span> -->
-                <button (click)="toggleFavorite(food)" class="favorite {{food.favorite?'':'not'}}" >
-                  {{ food.favorite ? 'Unfavorite' : 'Favorite' }}❤
-                </button>
                 <div class="price">
                     <span class="price">
                         {{food.price | currency:'INR'}}
@@ -34,7 +34,7 @@
       </ul>
     </div>
     <div class="pop-btn">
-      <button class="button">Explore More</button>
+      <button class="button"><a class="nav-item button" routerLink="/menu">Explore More</a></button>
     </div>
   </div>
 

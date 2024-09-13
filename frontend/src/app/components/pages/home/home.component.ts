@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit{
 
       foodsObservable.subscribe((serverFoods) => {
         this.foods = serverFoods;
+        this.foods = this.foods.slice(0, 4); // Only keep the first 4 items
     })
   })
   }
@@ -44,7 +45,6 @@ export class HomeComponent implements OnInit{
   }
   
   ngOnInit(): void {
-    
  
   }
 }

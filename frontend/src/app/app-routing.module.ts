@@ -9,10 +9,12 @@ import { CheckoutPageComponent } from './components/pages/checkout-page/checkout
 import { AuthGuard } from './auth/guards/auth.guard';
 import { MenuPageComponent } from './components/pages/menu-page/menu-page.component';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
+import { ContactPageComponent } from './components/pages/contact-page/contact-page.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
   {path:'menu', component:MenuPageComponent},
+  {path:'contact', component:ContactPageComponent},
   {path:'search/:searchTearm', component:HomeComponent},
   {path:'tag/:tag', component:HomeComponent},
   {path:'food/:id', component:FoodPageComponent},

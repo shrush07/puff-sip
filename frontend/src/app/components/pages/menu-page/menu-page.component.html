@@ -1,9 +1,9 @@
 <div id="pop-items" class="pop-items">
     <h3 class="pop-title">Items</h3>
-  <app-tags></app-tags>
+  <!-- <app-tags></app-tags> -->
     <div class="items">
-      <ul class="items">
-        <li *ngFor="let food of foods" class="item">
+      <ul class="items  item-grid">
+        <li *ngFor="let food of foods;" class="item">
           <a routerLink="/food/{{ food._id }}" class="link">
             <img [src]="food.imageUrl" [alt]="" food.name class="item-img"/>
             <div class="content">

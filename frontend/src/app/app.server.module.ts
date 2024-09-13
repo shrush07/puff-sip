@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 // import { AppModule } from './AppModule';
 import { ServerModule } from '@angular/platform-server';
-import { InputContainerComponent } from './components/partials/input-container/input-container.component';
+import { ContactPageComponent } from './components/pages/contact-page/contact-page.component';
+// import { InputContainerComponent } from './components/partials/input-container/input-container.component';
 // import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 // import { MenuPageComponent } from './components/pages/menu-page/menu-page.component';
 // import { MapComponent } from './components/partials/map/map.component';
@@ -22,7 +23,7 @@ import { InputContainerComponent } from './components/partials/input-container/i
   ],
   bootstrap: [AppComponent],
   declarations: [
-    InputContainerComponent,
+    // InputContainerComponent,
     // PaymentPageComponent,
     // MenuPageComponent,
     // MapComponent,
@@ -33,6 +34,9 @@ import { InputContainerComponent } from './components/partials/input-container/i
     // InputValidationComponent,
     // TextInputComponent,
     // DefaultButtonComponent
+  
+    // ContactPageComponent
+  
   ],
 })
 export class AppServerModule {}

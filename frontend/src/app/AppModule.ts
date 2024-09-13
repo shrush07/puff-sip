@@ -33,6 +33,7 @@ import { PaymentPageComponent } from './components/pages/payment-page/payment-pa
 // import { StarRatingComponent } from './components/partials/star-rating/star-rating.component';
 import { RouterModule } from '@angular/router';
 import { MenuPageComponent } from './components/pages/menu-page/menu-page.component';
+import { ContactPageComponent } from './components/pages/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { MenuPageComponent } from './components/pages/menu-page/menu-page.compon
     MapComponent,
     MenuPageComponent,
     PaymentPageComponent,
+    ContactPageComponent
     // PaypalButtonComponent,
     // OrderTrackPageComponent,
     // StarRatingComponent

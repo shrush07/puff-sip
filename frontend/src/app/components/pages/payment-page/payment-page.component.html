@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="content">
+<div  class="container">
+    <div *ngIf="order; else loading" class="content">
       <app-title title="Order Summary" fontSize="1.6rem"></app-title>
       <div class="summary">
         <div>
@@ -17,6 +17,9 @@
       </div>
       <order-items-list [order]="order"></order-items-list>
     </div>
+    <ng-template #loading>
+      <p>Loading order details...</p>
+    </ng-template>
     <!-- <div class="map">
       <app-title
       title="Shipping Address"

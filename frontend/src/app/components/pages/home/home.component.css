@@ -57,6 +57,11 @@ p{
     width: 170px;
     color: #ffffff;
     text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button:hover{
+    text-decoration: underline;
 }
 
 /*----Popular Items----*/
